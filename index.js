@@ -57,6 +57,6 @@ app.get("/comics", async (req, res) => {
 app.all("*", function(req, res) {
   res.json({ message: "all routes" });
 });
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("server has started");
 });
